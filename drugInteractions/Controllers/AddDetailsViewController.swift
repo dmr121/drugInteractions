@@ -12,8 +12,9 @@ import Firebase
 class AddDetailsViewController: UIViewController {
     
     //MARK: Variables
-    var drugName = ""
-    let db = Firestore.firestore().collection(K.Collections.usersCollection)
+    var drug = ""
+    let usersCollection = Firestore.firestore().collection(K.Collections.usersCollection)
+    let pharmacyCollection = Firestore.firestore().collection(K.Collections.pharmacyCollection)
     
     //MARK: Outlets
     @IBOutlet weak var drugNameLabel: UILabel!
@@ -35,18 +36,19 @@ class AddDetailsViewController: UIViewController {
         
         addButton.layer.cornerRadius = 10
         dosageTextField.becomeFirstResponder()
-        drugNameLabel.text = drugName
+        drugNameLabel.text = drug
     }
     
     //MARK: Functions
     @IBAction func addButtonPressed(_ sender: UIButton) {
         if let dosage = dosageTextField.text, let numDoses = numDosesTextField.text, let specialIn = specialInstructionsTextField.text {
-            let data = [
+            let data: [String: Any] = [
+                "drug": drug,
                 "dosage": dosage,
                 "numDoses": numDoses,
                 "instructions": specialIn
             ]
-            db.document((Auth.auth().currentUser?.email!)!).collection("currentPrescriptions").addDocument(data: data) { (error) in
+            usersCollection.document((Auth.auth().currentUser?.email!)!).collection("currentPrescriptions").addDocument(data: data) { (error) in
                 if let error = error {
                     print(error.localizedDescription)
                 } else {

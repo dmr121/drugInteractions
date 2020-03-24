@@ -450,7 +450,7 @@
                     <connections>
                         <outlet property="searchTextField" destination="qBl-db-tGj" id="xAL-4N-FkF"/>
                         <outlet property="tableView" destination="IHZ-yZ-FJ6" id="5qF-Aq-P5c"/>
-                        <segue destination="zvY-pg-GMn" kind="presentation" identifier="AddButtonSegue" id="KRb-vR-YNR"/>
+                        <segue destination="zvY-pg-GMn" kind="show" identifier="AddButtonSegue" id="KRb-vR-YNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfr-yb-2tA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -462,11 +462,11 @@
             <objects>
                 <viewController id="zvY-pg-GMn" customClass="AddDetailsViewController" customModule="drugInteractions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dih-Fp-wEr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aU3-bi-tyc" userLabel="Title and Subtitile Stack View">
-                                <rect key="frame" x="20" y="20" width="374" height="67.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="67.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To Pharmkit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO2-6H-Qoh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="39.5"/>
@@ -489,7 +489,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-Sn-Q3d" userLabel="Text Fields Stack View">
-                                <rect key="frame" x="20" y="107.5" width="374" height="255"/>
+                                <rect key="frame" x="20" y="195.5" width="374" height="255"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ur5-EL-N0n" userLabel="Dosage Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
@@ -568,7 +568,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvB-if-X9s">
-                                <rect key="frame" x="20" y="382.5" width="374" height="60.5"/>
+                                <rect key="frame" x="20" y="470.5" width="374" height="60.5"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60.5" id="DZQ-hO-FTV"/>
@@ -597,6 +597,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d49-HS-boN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Yj0-AZ-oMy"/>
                     <connections>
                         <outlet property="addButton" destination="GvB-if-X9s" id="38F-q5-Mj0"/>
                         <outlet property="dosageTextField" destination="Jz2-i2-9Na" id="8Hm-Mn-Ejy"/>

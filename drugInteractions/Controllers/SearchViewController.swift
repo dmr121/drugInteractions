@@ -39,7 +39,7 @@ class SearchViewController: UIViewController {
         if segue.identifier == K.Segues.AddButtonSegue {
             if let nextViewController = segue.destination as? AddDetailsViewController {
                 // Sending the proper drug information to the next view controller
-                nextViewController.drugName = drugSuggestionList[selectedRow!]
+                nextViewController.drug = drugSuggestionList[selectedRow!]
             }
         }
     }
@@ -126,17 +126,6 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
-        
-        Firestore.firestore().collection("pharmacy").whereField("drugName", isEqualTo: drugSuggestionList[selectedRow!]).getDocuments { (snapshot, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                if let snapshot = snapshot?.documents {
-                    let data = snapshot[0].data()
-                    let drug = Drug(data)
-                }
-            }
-        }
         performSegue(withIdentifier: K.Segues.AddButtonSegue, sender: self)
     }
 }
