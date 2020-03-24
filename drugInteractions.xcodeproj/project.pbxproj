@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E0EF62C24105A3F00C7F466 /* PrescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EF62B24105A3F00C7F466 /* PrescriptionsViewController.swift */; };
+		1E0EF62E2411849200C7F466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E0EF62D2411849200C7F466 /* GoogleService-Info.plist */; };
+		1E1B2516240F226E00216A25 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B2515240F226E00216A25 /* registerViewController.swift */; };
+		1E1EBA2C240E015700EA79CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EBA2B240E015700EA79CD /* AppDelegate.swift */; };
+		1E1EBA2E240E015700EA79CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EBA2D240E015700EA79CD /* SceneDelegate.swift */; };
+		1E1EBA30240E015700EA79CD /* startupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EBA2F240E015700EA79CD /* startupScreenViewController.swift */; };
+		1E1EBA33240E015700EA79CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBA31240E015700EA79CD /* Main.storyboard */; };
+		1E1EBA35240E015900EA79CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBA34240E015900EA79CD /* Assets.xcassets */; };
+		1E1EBA38240E015900EA79CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EBA36240E015900EA79CD /* LaunchScreen.storyboard */; };
+		1E1EBA43240E02AC00EA79CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EBA42240E02AC00EA79CD /* Constants.swift */; };
+		1E1EBA45240E053F00EA79CD /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EBA44240E053F00EA79CD /* loginViewController.swift */; };
+		1E3FF8BD241C374D0019E255 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FF8BC241C374D0019E255 /* Drug.swift */; };
+		1E3FF8C0241C3A410019E255 /* DrugSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FF8BE241C3A410019E255 /* DrugSuggestionCell.swift */; };
+		1E3FF8C1241C3A410019E255 /* DrugSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3FF8BF241C3A410019E255 /* DrugSuggestionCell.xib */; };
+		1E7669FB24241612007B11B2 /* AddDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7669FA24241612007B11B2 /* AddDetailsViewController.swift */; };
+		1E7980CD2416ED7100FF3E5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7980CC2416ED7100FF3E5B /* SearchViewController.swift */; };
+		A38BDE4295556B0835A902BF /* Pods_drugInteractions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50245CEDDF1D1A2031076CF /* Pods_drugInteractions.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E0EF62B24105A3F00C7F466 /* PrescriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionsViewController.swift; sourceTree = "<group>"; };
+		1E0EF62D2411849200C7F466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E1B2515240F226E00216A25 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		1E1EBA28240E015600EA79CD /* drugInteractions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drugInteractions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1EBA2B240E015700EA79CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E1EBA2D240E015700EA79CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E1EBA2F240E015700EA79CD /* startupScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startupScreenViewController.swift; sourceTree = "<group>"; };
+		1E1EBA32240E015700EA79CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E1EBA34240E015900EA79CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1EBA37240E015900EA79CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E1EBA39240E015900EA79CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1EBA42240E02AC00EA79CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E1EBA44240E053F00EA79CD /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		1E3FF8BC241C374D0019E255 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		1E3FF8BE241C3A410019E255 /* DrugSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugSuggestionCell.swift; sourceTree = "<group>"; };
+		1E3FF8BF241C3A410019E255 /* DrugSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugSuggestionCell.xib; sourceTree = "<group>"; };
+		1E7669FA24241612007B11B2 /* AddDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsViewController.swift; sourceTree = "<group>"; };
+		1E7980CC2416ED7100FF3E5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8C050B5461FC481519AC2397 /* Pods-drugInteractions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drugInteractions.release.xcconfig"; path = "Target Support Files/Pods-drugInteractions/Pods-drugInteractions.release.xcconfig"; sourceTree = "<group>"; };
+		A50245CEDDF1D1A2031076CF /* Pods_drugInteractions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drugInteractions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B1D7E8732A45E84358233A /* Pods-drugInteractions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drugInteractions.debug.xcconfig"; path = "Target Support Files/Pods-drugInteractions/Pods-drugInteractions.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1EBA25240E015600EA79CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A38BDE4295556B0835A902BF /* Pods_drugInteractions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E1EBA1F240E015600EA79CD = {
+			isa = PBXGroup;
+			children = (
+				1E1EBA2A240E015600EA79CD /* drugInteractions */,
+				1E1EBA29240E015600EA79CD /* Products */,
+				C92E4A28E65CC778D4789757 /* Pods */,
+				8EB3D84D222D22B5A358233F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E1EBA29240E015600EA79CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EBA28240E015600EA79CD /* drugInteractions.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E1EBA2A240E015600EA79CD /* drugInteractions */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EBA41240E019500EA79CD /* Models */,
+				1E1EBA2B240E015700EA79CD /* AppDelegate.swift */,
+				1E1EBA2D240E015700EA79CD /* SceneDelegate.swift */,
+				1E1EBA40240E018200EA79CD /* Controllers */,
+				1E1EBA3F240E017400EA79CD /* Views */,
+				1E1EBA34240E015900EA79CD /* Assets.xcassets */,
+				1E1EBA36240E015900EA79CD /* LaunchScreen.storyboard */,
+				1E1EBA39240E015900EA79CD /* Info.plist */,
+				1E1EBA42240E02AC00EA79CD /* Constants.swift */,
+				1E0EF62D2411849200C7F466 /* GoogleService-Info.plist */,
+			);
+			path = drugInteractions;
+			sourceTree = "<group>";
+		};
+		1E1EBA3F240E017400EA79CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EBA31240E015700EA79CD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E1EBA40240E018200EA79CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E3FF8BE241C3A410019E255 /* DrugSuggestionCell.swift */,
+				1E3FF8BF241C3A410019E255 /* DrugSuggestionCell.xib */,
+				1E1EBA2F240E015700EA79CD /* startupScreenViewController.swift */,
+				1E1EBA44240E053F00EA79CD /* loginViewController.swift */,
+				1E1B2515240F226E00216A25 /* registerViewController.swift */,
+				1E0EF62B24105A3F00C7F466 /* PrescriptionsViewController.swift */,
+				1E7980CC2416ED7100FF3E5B /* SearchViewController.swift */,
+				1E7669FA24241612007B11B2 /* AddDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E1EBA41240E019500EA79CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E3FF8BC241C374D0019E255 /* Drug.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EB3D84D222D22B5A358233F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A50245CEDDF1D1A2031076CF /* Pods_drugInteractions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92E4A28E65CC778D4789757 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0B1D7E8732A45E84358233A /* Pods-drugInteractions.debug.xcconfig */,
+				8C050B5461FC481519AC2397 /* Pods-drugInteractions.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E1EBA27240E015600EA79CD /* drugInteractions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1EBA3C240E015900EA79CD /* Build configuration list for PBXNativeTarget "drugInteractions" */;
+			buildPhases = (
+				7B40530C332453F45BDA7F1D /* [CP] Check Pods Manifest.lock */,
+				1E1EBA24240E015600EA79CD /* Sources */,
+				1E1EBA25240E015600EA79CD /* Frameworks */,
+				1E1EBA26240E015600EA79CD /* Resources */,
+				747BF023A368F9C79199D0F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = drugInteractions;
+			productName = drugInteractions;
+			productReference = 1E1EBA28240E015600EA79CD /* drugInteractions.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E1EBA20240E015600EA79CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "David Rozmajzl";
+				TargetAttributes = {
+					1E1EBA27240E015600EA79CD = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = 1E1EBA23240E015600EA79CD /* Build configuration list for PBXProject "drugInteractions" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E1EBA1F240E015600EA79CD;
+			productRefGroup = 1E1EBA29240E015600EA79CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E1EBA27240E015600EA79CD /* drugInteractions */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E1EBA26240E015600EA79CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3FF8C1241C3A410019E255 /* DrugSuggestionCell.xib in Resources */,
+				1E1EBA38240E015900EA79CD /* LaunchScreen.storyboard in Resources */,
+				1E0EF62E2411849200C7F466 /* GoogleService-Info.plist in Resources */,
+				1E1EBA35240E015900EA79CD /* Assets.xcassets in Resources */,
+				1E1EBA33240E015700EA79CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		747BF023A368F9C79199D0F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-drugInteractions/Pods-drugInteractions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-drugInteractions/Pods-drugInteractions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-drugInteractions/Pods-drugInteractions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B40530C332453F45BDA7F1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-drugInteractions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1EBA24240E015600EA79CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1EBA30240E015700EA79CD /* startupScreenViewController.swift in Sources */,
+				1E3FF8C0241C3A410019E255 /* DrugSuggestionCell.swift in Sources */,
+				1E1EBA2C240E015700EA79CD /* AppDelegate.swift in Sources */,
+				1E7980CD2416ED7100FF3E5B /* SearchViewController.swift in Sources */,
+				1E0EF62C24105A3F00C7F466 /* PrescriptionsViewController.swift in Sources */,
+				1E1EBA2E240E015700EA79CD /* SceneDelegate.swift in Sources */,
+				1E7669FB24241612007B11B2 /* AddDetailsViewController.swift in Sources */,
+				1E3FF8BD241C374D0019E255 /* Drug.swift in Sources */,
+				1E1B2516240F226E00216A25 /* registerViewController.swift in Sources */,
+				1E1EBA43240E02AC00EA79CD /* Constants.swift in Sources */,
+				1E1EBA45240E053F00EA79CD /* loginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E1EBA31240E015700EA79CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1EBA32240E015700EA79CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E1EBA36240E015900EA79CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1EBA37240E015900EA79CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E1EBA3A240E015900EA79CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E1EBA3B240E015900EA79CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E1EBA3D240E015900EA79CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B1D7E8732A45E84358233A /* Pods-drugInteractions.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28LZ2Y9Q6R;
+				INFOPLIST_FILE = drugInteractions/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidRozmajzl.drugInteractions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1EBA3E240E015900EA79CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C050B5461FC481519AC2397 /* Pods-drugInteractions.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28LZ2Y9Q6R;
+				INFOPLIST_FILE = drugInteractions/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidRozmajzl.drugInteractions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1EBA23240E015600EA79CD /* Build configuration list for PBXProject "drugInteractions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1EBA3A240E015900EA79CD /* Debug */,
+				1E1EBA3B240E015900EA79CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1EBA3C240E015900EA79CD /* Build configuration list for PBXNativeTarget "drugInteractions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1EBA3D240E015900EA79CD /* Debug */,
+				1E1EBA3E240E015900EA79CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E1EBA20240E015600EA79CD /* Project object */;
+}
