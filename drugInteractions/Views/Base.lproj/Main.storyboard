@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPM-W5-0jB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPM-W5-0jB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -503,7 +503,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many milligrams?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-i2-9Na">
                                                 <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" smartInsertDeleteType="no"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -630,11 +630,11 @@
             <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="arrow.right" catalog="system" width="64" height="48"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ulq-SJ-Nqz"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

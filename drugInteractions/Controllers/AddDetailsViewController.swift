@@ -40,18 +40,52 @@ class AddDetailsViewController: UIViewController {
     }
     
     //MARK: Functions
+    func alertUserOfInvalidInput(_ message: String) {
+        let alertController = UIAlertController(title: "Add To 💊Pharmkit", message:
+            message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Try Again", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    //MARK: Actions
     @IBAction func addButtonPressed(_ sender: UIButton) {
         if let dosage = dosageTextField.text, let numDoses = numDosesTextField.text, let specialIn = specialInstructionsTextField.text {
-            let data: [String: Any] = [
-                "drug": drug,
-                "dosage": dosage,
-                "numDoses": numDoses,
-                "instructions": specialIn
+            var data: [String: Any] = [
+                "drugName": drug,
+                "specialInstructions": specialIn
             ]
+            // Needs refactored
+            //MARK: Ugly Code
+            if let dosageFloat = Float(dosage) {
+                if dosageFloat > 0 {
+                    data["dosage"] = dosageFloat
+                } else {
+                    alertUserOfInvalidInput("Dosage must be greater than 0.")
+                    return
+                }
+            } else {
+                alertUserOfInvalidInput("Dosage must be a number.")
+                return
+            }
+            if let numDosesFloat = Float(numDoses) {
+                if numDosesFloat > 0 {
+                    data["numDoses"] = numDosesFloat
+                } else {
+                    alertUserOfInvalidInput("Number of Doses must be greater than 0.")
+                    return
+                }
+            } else {
+                alertUserOfInvalidInput("Number of Doses must be a number.")
+                return
+            }
+            
+            
             usersCollection.document((Auth.auth().currentUser?.email!)!).collection("currentPrescriptions").addDocument(data: data) { (error) in
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
+                    print("Added to Firebase")
                     self.navigationController?.popViewController(animated: true)
                 }
             }
