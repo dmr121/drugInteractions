@@ -4,6 +4,8 @@ struct K {
     static let appName = "💊Pharmkit"
     static let DrugSuggestionCell = "DrugSuggestionCell"
     static let reusableDrugSuggestionCell = "reusableDrugSuggestionCell"
+    static let UserPrescriptionCell = "UserPrescriptionCell"
+    static let reusableUserPrescriptionCell = "reusableUserPrescriptionCell"
     
     struct Segues {
         static let RegisterToPrescriptions = "RegisterToPrescriptions"

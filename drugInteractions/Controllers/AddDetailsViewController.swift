@@ -97,12 +97,14 @@ class AddDetailsViewController: UIViewController {
 extension AddDetailsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField.tag {
+            /*
         case dosageTextField.tag:
             numDosesTextField.becomeFirstResponder()
             break
         case numDosesTextField.tag:
             specialInstructionsTextField.becomeFirstResponder()
             break
+             */
         case specialInstructionsTextField.tag:
             specialInstructionsTextField.resignFirstResponder()
             break

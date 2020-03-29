@@ -12,7 +12,7 @@ import Firebase
 class SearchViewController: UIViewController {
     
     //MARK: Variables
-    var drugSuggestionList: [String] = [] // Empty array of type Drug
+    var drugSuggestionList: [String] = [] // Empty array of type String
     let user = Auth.auth().currentUser
     let pharmCollection = Firestore.firestore().collection(K.Collections.drugNamesCollection)
     var selectedRow: Int?
@@ -72,8 +72,10 @@ class SearchViewController: UIViewController {
                                     self.drugSuggestionList.append(suggestion)
                                 }
                             }
-                            // Updating the table
-                            self.tableView.reloadData()
+                            DispatchQueue.main.async {
+                                // Updating the table
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 }

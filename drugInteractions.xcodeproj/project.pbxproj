@@ -23,6 +23,7 @@
 		1E3FF8C1241C3A410019E255 /* DrugSuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3FF8BF241C3A410019E255 /* DrugSuggestionCell.xib */; };
 		1E7669FB24241612007B11B2 /* AddDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7669FA24241612007B11B2 /* AddDetailsViewController.swift */; };
 		1E7980CD2416ED7100FF3E5B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7980CC2416ED7100FF3E5B /* SearchViewController.swift */; };
+		1E821857243021010078221B /* UserPrescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E821856243021010078221B /* UserPrescription.swift */; };
 		A38BDE4295556B0835A902BF /* Pods_drugInteractions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50245CEDDF1D1A2031076CF /* Pods_drugInteractions.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1E3FF8BF241C3A410019E255 /* DrugSuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugSuggestionCell.xib; sourceTree = "<group>"; };
 		1E7669FA24241612007B11B2 /* AddDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsViewController.swift; sourceTree = "<group>"; };
 		1E7980CC2416ED7100FF3E5B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1E821856243021010078221B /* UserPrescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrescription.swift; sourceTree = "<group>"; };
 		8C050B5461FC481519AC2397 /* Pods-drugInteractions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drugInteractions.release.xcconfig"; path = "Target Support Files/Pods-drugInteractions/Pods-drugInteractions.release.xcconfig"; sourceTree = "<group>"; };
 		A50245CEDDF1D1A2031076CF /* Pods_drugInteractions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drugInteractions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B1D7E8732A45E84358233A /* Pods-drugInteractions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drugInteractions.debug.xcconfig"; path = "Target Support Files/Pods-drugInteractions/Pods-drugInteractions.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				1E3FF8BC241C374D0019E255 /* Drug.swift */,
+				1E821856243021010078221B /* UserPrescription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				1E7980CD2416ED7100FF3E5B /* SearchViewController.swift in Sources */,
 				1E0EF62C24105A3F00C7F466 /* PrescriptionsViewController.swift in Sources */,
 				1E1EBA2E240E015700EA79CD /* SceneDelegate.swift in Sources */,
+				1E821857243021010078221B /* UserPrescription.swift in Sources */,
 				1E7669FB24241612007B11B2 /* AddDetailsViewController.swift in Sources */,
 				1E3FF8BD241C374D0019E255 /* Drug.swift in Sources */,
 				1E1B2516240F226E00216A25 /* registerViewController.swift in Sources */,
