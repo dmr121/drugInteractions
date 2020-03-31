@@ -19,11 +19,14 @@ class PrescriptionsViewController: UIViewController {
     //MARK: Variables
     var prescriptions: [UserPrescription] = []
     let usersCollection = Firestore.firestore().collection(K.Collections.usersCollection)
+    var selectedRow: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: K.UserPrescriptionCell, bundle: nil), forCellReuseIdentifier: K.reusableUserPrescriptionCell)
         addButton.layer.cornerRadius = 10
         checkInteractionsButton.layer.cornerRadius = 10
     }
@@ -31,6 +34,15 @@ class PrescriptionsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadPrescriptions()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.PrescriptionToInfo {
+            if let nextViewController = segue.destination as? InfoViewController {
+                // Sending the proper drug information to the next view controller
+                nextViewController.prescription = prescriptions[selectedRow!]
+            }
+        }
     }
     
     //MARK: Functions
@@ -42,17 +54,13 @@ class PrescriptionsViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 if let documents = querySnapshot?.documents {
-                    print("HERE 1")
-                    print("There are \(documents.count) documents")
                     for doc in documents {
-                        print("HERE 2")
                         let data = doc.data()
                         let userPrescription = UserPrescription(data)
                         self.prescriptions.append(userPrescription)
                     }
                     
                     DispatchQueue.main.async {
-                        print("HERE 3")
                         self.tableView.reloadData()
                     }
                 }
@@ -79,9 +87,39 @@ extension PrescriptionsViewController: UITableViewDataSource {
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.reusableUserPrescriptionCell, for: indexPath)
-        cell.textLabel?.text = prescriptions[indexPath.row].drugName
-        print(prescriptions[indexPath.row].drugName)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reusableUserPrescriptionCell, for: indexPath) as! UserPrescriptionCell
+        // Split the drug title on the paranthesis
+        let drugTitle = prescriptions[indexPath.row].drugName.split(separator: "(", maxSplits: 1, omittingEmptySubsequences: false)
+        // Take first part of drug title (this is the simple name)
+        let drugName = String(drugTitle[0])
+        cell.drugNameLabel.text = drugName
+        // Hide the subtitle in case we don't use it
+        cell.alternateNamesLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        // If there is more than one element in the splitted string array
+        // set the drug suggestion cell subtitle to that second element
+        if drugTitle.count > 1 {
+            // Make sure to remove the last paranthesis in the subtitle with
+            // the following prefix method
+            let alternateNames = String(drugTitle[1].prefix(drugTitle[1].count - 1))
+            // Un-hide the subtitle
+            cell.alternateNamesLabel.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+            // Set the subtitle in the cell to the found subtitle
+            cell.alternateNamesLabel.text = alternateNames
+        }
+        
+        let dosage = prescriptions[indexPath.row].dosage
+        let numDoses = prescriptions[indexPath.row].numDoses
+        
+        cell.dosageLabel.text = String(dosage) + " mg"
+        cell.numDosesLabel.text = String(Int(numDoses)) + " daily"
+        
         return cell
+    }
+}
+
+extension PrescriptionsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: K.Segues.PrescriptionToInfo, sender: self)
     }
 }

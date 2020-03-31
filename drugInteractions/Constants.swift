@@ -14,6 +14,8 @@ struct K {
         static let StartupToLogin = "StartupToLogin"
         static let PrescriptionToAdd = "PrescriptionToAdd"
         static let AddButtonSegue = "AddButtonSegue"
+        static let PrescriptionToCheck = "PrescriptionToCheck"
+        static let PrescriptionToInfo = "PrescriptionToInfo"
     }
     
     struct Collections {

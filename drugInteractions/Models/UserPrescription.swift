@@ -7,15 +7,29 @@
 //
 
 struct UserPrescription: Codable {
-    let drugName: String
+    var drugName: String
     var dosage: Float
     var numDoses: Float
     var specialInstructions: String
+    
+    init() {
+        drugName = ""
+        dosage = 0
+        numDoses = 0
+        specialInstructions = ""
+    }
     
     init(_ data: [String: Any]) {
         drugName = data["drugName"] as! String
         dosage = data["dosage"] as! Float
         numDoses = data["numDoses"] as! Float
         specialInstructions = data["specialInstructions"] as! String
+    }
+    
+    func printDrug() {
+        print(drugName)
+        print(dosage)
+        print(numDoses)
+        print("\n\n")
     }
 }
