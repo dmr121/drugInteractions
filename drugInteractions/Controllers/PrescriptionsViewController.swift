@@ -29,12 +29,14 @@ class PrescriptionsViewController: UIViewController {
         tableView.register(UINib(nibName: K.UserPrescriptionCell, bundle: nil), forCellReuseIdentifier: K.reusableUserPrescriptionCell)
         addButton.layer.cornerRadius = 10
         checkInteractionsButton.layer.cornerRadius = 10
+        loadPrescriptions()
     }
     
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadPrescriptions()
-    }
+    } */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Segues.PrescriptionToInfo {
@@ -42,21 +44,26 @@ class PrescriptionsViewController: UIViewController {
                 // Sending the proper drug information to the next view controller
                 nextViewController.prescription = prescriptions[selectedRow!]
             }
+        } else if segue.identifier == K.Segues.PrescriptionToCheck {
+            if let nextViewController = segue.destination as? CheckViewController {
+                // Send user prescription list to the next screen
+                nextViewController.prescriptions = prescriptions
+            }
         }
     }
     
     //MARK: Functions
     func loadPrescriptions() {
-        prescriptions.removeAll() // Empty prescriptions array in case anything may have been in it
-        
-        usersCollection.document((Auth.auth().currentUser?.email!)!).collection("currentPrescriptions").getDocuments() { (querySnapshot, error) in
+        usersCollection.document((Auth.auth().currentUser?.email!)!).collection("currentPrescriptions").addSnapshotListener() { (querySnapshot, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
+                self.prescriptions.removeAll() // Empty prescriptions array in case anything may have been in it
                 if let documents = querySnapshot?.documents {
                     for doc in documents {
                         let data = doc.data()
-                        let userPrescription = UserPrescription(data)
+                        let id = doc.documentID
+                        let userPrescription = UserPrescription(data, id)
                         self.prescriptions.append(userPrescription)
                     }
                     

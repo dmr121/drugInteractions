@@ -20,10 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="261" height="59.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mW4-UG-tn7">
-                                <rect key="frame" x="10" y="5" width="251" height="49.5"/>
+                                <rect key="frame" x="0.0" y="5" width="261" height="49.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-2c-RPx">
-                                        <rect key="frame" x="0.0" y="0.0" width="251" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="mHM-Zb-Gx3"/>
                                         </constraints>
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternate Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXE-ew-yMz">
-                                        <rect key="frame" x="0.0" y="20.5" width="251" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="261" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14.5" id="ic8-Ht-edS"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="mW4-UG-tn7" secondAttribute="bottom" constant="5" id="G3P-uJ-cXF"/>
-                            <constraint firstItem="mW4-UG-tn7" firstAttribute="leading" secondItem="k7Y-Y2-Dw3" secondAttribute="leading" constant="10" id="lYP-GK-O3W"/>
+                            <constraint firstItem="mW4-UG-tn7" firstAttribute="leading" secondItem="k7Y-Y2-Dw3" secondAttribute="leading" id="lYP-GK-O3W"/>
                             <constraint firstItem="mW4-UG-tn7" firstAttribute="top" secondItem="k7Y-Y2-Dw3" secondAttribute="top" constant="5" id="oSE-xD-V6O"/>
                             <constraint firstAttribute="trailing" secondItem="mW4-UG-tn7" secondAttribute="trailing" id="qcO-pQ-dAR"/>
                         </constraints>

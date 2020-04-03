@@ -51,6 +51,7 @@ class SearchViewController: UIViewController {
         let formattedString = string.prefix(1).capitalized + string.dropFirst()
         return formattedString
     }
+    
     @IBAction func searchTermTextChanged(_ sender: UITextField) {
         if let searchTerm = sender.text {
             // Check if there is text in field

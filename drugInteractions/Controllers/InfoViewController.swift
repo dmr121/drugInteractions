@@ -21,6 +21,7 @@ class InfoViewController: UIViewController {
     
     //MARK: Variables
     var prescription = UserPrescription()
+    let usersCollection = Firestore.firestore().collection(K.Collections.usersCollection)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,5 +37,16 @@ class InfoViewController: UIViewController {
             specialInstructionsPermanentLabel.text = "No Special Instructions"
         }
         removeButton.layer.cornerRadius = 10
+    }
+    
+    //MARK: Actions
+    @IBAction func removeButtonPressed(_ sender: UIButton) {
+        usersCollection.document((Auth.auth().currentUser?.email)!).collection(K.Collections.currentPrescriptionsCollection).document(prescription.id).delete { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

@@ -16,12 +16,14 @@ struct K {
         static let AddButtonSegue = "AddButtonSegue"
         static let PrescriptionToCheck = "PrescriptionToCheck"
         static let PrescriptionToInfo = "PrescriptionToInfo"
+        static let CheckToResult = "CheckToResult"
     }
     
     struct Collections {
         static let pharmacyCollection = "pharmacy"
         static let drugNamesCollection = "drugNames"
         static let usersCollection = "users"
+        static let currentPrescriptionsCollection = "currentPrescriptions"
     }
     
     struct Colors {

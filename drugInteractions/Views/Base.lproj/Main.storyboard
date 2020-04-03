@@ -304,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-XT-FLO">
-                                <rect key="frame" x="0.0" y="248.5" width="414" height="564.5"/>
+                                <rect key="frame" x="20" y="248.5" width="374" height="564.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <sections/>
                             </tableView>
@@ -347,7 +347,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="Tx0-h8-TgM" kind="presentation" identifier="PrescriptionToCheck" id="BEB-LM-Yph"/>
+                                                            <segue destination="Tx0-h8-TgM" kind="show" identifier="PrescriptionToCheck" id="BEB-LM-Yph"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -376,9 +376,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5sE-v5-zVq" firstAttribute="trailing" secondItem="CEJ-fo-zl8" secondAttribute="trailing" id="57Z-HL-9qD"/>
-                            <constraint firstItem="HoQ-XT-FLO" firstAttribute="trailing" secondItem="CEJ-fo-zl8" secondAttribute="trailing" id="7s3-Cr-BPa"/>
+                            <constraint firstItem="HoQ-XT-FLO" firstAttribute="trailing" secondItem="CEJ-fo-zl8" secondAttribute="trailing" constant="-20" id="7s3-Cr-BPa"/>
                             <constraint firstItem="5sE-v5-zVq" firstAttribute="top" secondItem="CEJ-fo-zl8" secondAttribute="top" id="Ghm-Ok-Qr1"/>
-                            <constraint firstItem="HoQ-XT-FLO" firstAttribute="leading" secondItem="CEJ-fo-zl8" secondAttribute="leading" id="HU9-11-ENL"/>
+                            <constraint firstItem="HoQ-XT-FLO" firstAttribute="leading" secondItem="CEJ-fo-zl8" secondAttribute="leading" constant="20" id="HU9-11-ENL"/>
                             <constraint firstItem="5sE-v5-zVq" firstAttribute="leading" secondItem="CEJ-fo-zl8" secondAttribute="leading" id="XmL-2o-JRN"/>
                             <constraint firstItem="HoQ-XT-FLO" firstAttribute="top" secondItem="5sE-v5-zVq" secondAttribute="bottom" id="b3F-1H-i4p"/>
                             <constraint firstItem="HoQ-XT-FLO" firstAttribute="bottom" secondItem="CEJ-fo-zl8" secondAttribute="bottom" id="khd-G5-xp0"/>
@@ -398,7 +398,7 @@
                         <outlet property="addButton" destination="VrS-Zm-cgf" id="SLd-5z-q47"/>
                         <outlet property="checkInteractionsButton" destination="0l4-Y8-9rH" id="Whj-N6-dW9"/>
                         <outlet property="tableView" destination="HoQ-XT-FLO" id="XBZ-aW-FZq"/>
-                        <segue destination="lQ3-0k-0h0" kind="presentation" identifier="PrescriptionToInfo" id="iZy-Ws-TrY"/>
+                        <segue destination="lQ3-0k-0h0" kind="show" identifier="PrescriptionToInfo" id="iZy-Ws-TrY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEH-OT-eej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -410,11 +410,11 @@
             <objects>
                 <viewController id="lQ3-0k-0h0" customClass="InfoViewController" customModule="drugInteractions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1kX-2E-VQL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-MA-XRD">
-                                <rect key="frame" x="20" y="20" width="374" height="333"/>
+                                <rect key="frame" x="20" y="108" width="374" height="333"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mEx-H8-vYQ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="67.5"/>
@@ -495,7 +495,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjb-Zy-K5l">
-                                <rect key="frame" x="20" y="727.5" width="374" height="60.5"/>
+                                <rect key="frame" x="20" y="732.5" width="374" height="60.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60.5" id="WaW-WD-A1g"/>
@@ -504,6 +504,9 @@
                                 <state key="normal" title="Remove From Prescriptions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="lQ3-0k-0h0" eventType="touchUpInside" id="mfC-Oh-APf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -536,16 +539,86 @@
             <objects>
                 <viewController id="Tx0-h8-TgM" customClass="CheckViewController" customModule="drugInteractions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTP-JY-Auh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Interactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X96-9q-kxA">
+                                <rect key="frame" x="20" y="108" width="374" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-rQ-6nX">
+                                <rect key="frame" x="0.0" y="222" width="414" height="591"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a drug" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LhA-tY-XPT">
+                                <rect key="frame" x="20" y="168" width="374" height="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="searchTermChanged:" destination="Tx0-h8-TgM" eventType="editingChanged" id="LAC-X0-lDT"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X96-9q-kxA" firstAttribute="top" secondItem="iSS-iC-vhm" secondAttribute="top" constant="20" id="Hiz-20-9vX"/>
+                            <constraint firstItem="0qu-rQ-6nX" firstAttribute="bottom" secondItem="iSS-iC-vhm" secondAttribute="bottom" id="M1K-JA-wHg"/>
+                            <constraint firstItem="iSS-iC-vhm" firstAttribute="trailing" secondItem="LhA-tY-XPT" secondAttribute="trailing" constant="20" id="PKB-mp-Jhx"/>
+                            <constraint firstItem="0qu-rQ-6nX" firstAttribute="top" secondItem="LhA-tY-XPT" secondAttribute="bottom" constant="20" id="YSQ-Kw-4sM"/>
+                            <constraint firstItem="LhA-tY-XPT" firstAttribute="top" secondItem="X96-9q-kxA" secondAttribute="bottom" constant="20" id="a0W-A5-uyG"/>
+                            <constraint firstItem="iSS-iC-vhm" firstAttribute="trailing" secondItem="0qu-rQ-6nX" secondAttribute="trailing" id="cNj-xh-aNx"/>
+                            <constraint firstItem="0qu-rQ-6nX" firstAttribute="leading" secondItem="nTP-JY-Auh" secondAttribute="leading" id="kjr-QM-GdZ"/>
+                            <constraint firstItem="iSS-iC-vhm" firstAttribute="trailing" secondItem="X96-9q-kxA" secondAttribute="trailing" constant="20" id="oRY-rg-iUr"/>
+                            <constraint firstItem="LhA-tY-XPT" firstAttribute="leading" secondItem="iSS-iC-vhm" secondAttribute="leading" constant="20" id="tXA-PH-PAd"/>
+                            <constraint firstItem="X96-9q-kxA" firstAttribute="leading" secondItem="iSS-iC-vhm" secondAttribute="leading" constant="20" id="ws7-GA-cDI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iSS-iC-vhm"/>
                     </view>
                     <navigationItem key="navigationItem" id="tC7-Fu-gQv"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="LhA-tY-XPT" id="CWF-LH-ehg"/>
+                        <outlet property="tableView" destination="0qu-rQ-6nX" id="c0w-mS-p5i"/>
+                        <segue destination="tdG-Mz-mcB" kind="presentation" identifier="CheckToResult" id="kzQ-t5-hwL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stf-aX-lFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5691" y="921"/>
+            <point key="canvasLocation" x="5690" y="917"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="vOc-V8-BCY">
+            <objects>
+                <viewController id="tdG-Mz-mcB" customClass="ResultViewController" customModule="drugInteractions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pcA-kI-eD6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consensus" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCJ-8l-FMH">
+                                <rect key="frame" x="20" y="406.5" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oCJ-8l-FMH" firstAttribute="centerY" secondItem="pcA-kI-eD6" secondAttribute="centerY" id="2gn-bV-in8"/>
+                            <constraint firstItem="wZO-60-zY2" firstAttribute="trailing" secondItem="oCJ-8l-FMH" secondAttribute="trailing" constant="20" id="8J6-W7-YrL"/>
+                            <constraint firstItem="oCJ-8l-FMH" firstAttribute="leading" secondItem="wZO-60-zY2" secondAttribute="leading" constant="20" id="eE4-nl-zxb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wZO-60-zY2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1xV-fF-tIM"/>
+                    <connections>
+                        <outlet property="interactionDescriptionLabel" destination="oCJ-8l-FMH" id="aIq-mL-THE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zuL-qb-3Ty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6766" y="918"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="q8e-9M-39P">
