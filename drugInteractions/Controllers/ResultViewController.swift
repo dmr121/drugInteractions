@@ -26,10 +26,10 @@ class ResultViewController: UIViewController {
         3: .systemRed
     ]
     let severityDescriptions: [Int: String] = [
-        0: "No reactions found between",
-        1: "Mild reactions found between",
-        2: "Moderate reactions found between",
-        3: "Severe reactions found between"
+        0: "No interactions found between",
+        1: "Mild interactions found between",
+        2: "Moderate interactions found between",
+        3: "Severe interactions found between"
     ]
     
     override func viewDidLoad() {
@@ -80,9 +80,9 @@ class ResultViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.async {
-                    let description = self.severityDescriptions[severity]! + " " + self.drugName + " and your prescriptions."
+                    let description = self.severityDescriptions[severity]! + " " + self.drugName + "and your prescriptions."
                     self.interactionDescriptionLabel.text = description
-                    UIView.animate(withDuration: 2.0) {
+                    UIView.animate(withDuration: 1.0) {
                         self.view.backgroundColor = self.severityColors[severity]
                     }
                 }
