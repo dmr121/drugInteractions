@@ -1,5 +1,5 @@
 # Pharmkit
-## Created by David Rozmajzl
+Created by David Rozmajzl
 
 ## Install Dependencies:
 (You need Xcode 11.4 to run this app)
