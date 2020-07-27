@@ -20,3 +20,7 @@ similarly named file, "drugInteractions.xcodeproj".
 
 Once in Xcode, choose your simulated device and click the run button.
 The first compilation will take a while.
+
+![landing page](https://github.com/dmr121/drugInteractions/blob/master/assets/IMG_1424.PNG)
+![no interaction](https://github.com/dmr121/drugInteractions/blob/master/assets/IMG_1426.PNG)
+![severe interaction](https://github.com/dmr121/drugInteractions/blob/master/assets/IMG_1425.PNG)
